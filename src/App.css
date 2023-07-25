@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body{
+  background-color: #f7f7ff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.istockphoto.com/photo/bled-lake-at-dusk-in-slovenia-gm1418720676-465315317?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fchristianity&utm_term=christianity%3A%3A%3A'); /* Replace 'path_to_your_background_image.jpg' with the actual image URL or path */
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+  .container {
+    display: flex;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.7); /* Set the background color to semi-transparent white */
+    position: fixed;
+    align-items: right;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .output {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between; 
+    align-items:left;
+    background-color:  #f7f7ff;
+    padding-left: 300px;
+    width: 500px;
+    
+  } 
+
+  input{
+   
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
+  }
+.Home{
+
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.Front{
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 500px;
+  display: flex;
+  flex-direction: column ;
+}
+.worker-preveiw{
+
+}
+.Name{
+display: inline block;
+
 }
 
-.App-link {
-  color: #61dafb;
+select{
+  width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
+}
+option{
+  width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
+}
+button{
+  border: none;
+  padding-bottom: 30 px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  width: 100px;
+  height: 60 px;
+  background-color: rgb(238, 19, 19);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  input{
+   
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.Home{
+
+  
+}
+
+
+.Front{
+  align-items: center;
+  width: 500px;
+  display: flex;
+  flex-direction: column ;
+}
+.worker-preveiw{
+
+}
+.Name{
+display: inline block;
+
+}
+
+select{
+  width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
+}
+option{
+  width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
+}
+button{
+  border: none;
+  padding-bottom: 30 px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  width: 100px;
+  height: 60 px;
+  background-color: rgb(238, 19, 19);
+ }
+.worker-preview img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* This ensures the image covers the entire circular area */
+  border-radius: 5%; /* Make the image circular */
+  overflow: hidden; /* This ensures the image is clipped to the circular shape */
 }
