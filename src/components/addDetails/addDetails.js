@@ -97,6 +97,7 @@ function AddDetails() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
+          style={{width:'100%', height:'5vh'}}
         />
         <br />
         <input
@@ -105,6 +106,7 @@ function AddDetails() {
           required
           value={surname}
           onChange={(e) => setSurname(e.target.value)}
+          style={{width:'100%', height:'5vh'}}
         />
         <br />
         <input
@@ -113,6 +115,7 @@ function AddDetails() {
           required
           value={dateOfBirth}
           onChange={(e) => setDateOfBirth(e.target.value)}
+          style={{width:'100%', height:'5vh'}}
         />
         <br />
         <input
@@ -121,6 +124,7 @@ function AddDetails() {
           required
           value={biography}
           onChange={(e) => setBiography(e.target.value)}
+          style={{width:'100%', height:'5vh'}}
         />
         <br />
         <input
@@ -129,6 +133,7 @@ function AddDetails() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={{width:'100%', height:'5vh'}}
         />
         <br />
         <input
@@ -137,10 +142,11 @@ function AddDetails() {
           required
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
+          style={{width:'100%', height:'5vh'}}
         />
         <br />
         
-          <select placeholder='Job Position' value={jobPosition} onChange={(e) => setJobPosition(e.target.value)}>
+          <select style={{width:'100%', height:'5vh'}} placeholder='Job Position' value={jobPosition} onChange={(e) => setJobPosition(e.target.value)}>
             <option >CEO</option>
             <option>Manager</option>
             <option>Secretary</option>
@@ -153,9 +159,11 @@ function AddDetails() {
           onChange={handleImageChange}
         /> */}
         <br />
-        <button type="submit" disabled={isPending}>
+        <div style={{width:'100%', height:'5vh',display:'flex',justifyContent:"center"}}>
+        <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid"}} type="submit" disabled={isPending}>
           {isPending ? 'Loading...' : 'Load details'}
         </button>
+        </div>
       </form>
     </div>
   );

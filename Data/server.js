@@ -38,6 +38,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/log-details');
 
 // Route for handling user signup.
 app.post('/api/log', async (req, res) => {
+  
     try {
       await User.create({
         name: req.body.name,

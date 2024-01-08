@@ -85,13 +85,14 @@ function DisplayData() {
         profiles.map((worker) => (
           <div className="worker-preview" key={worker._id}>
             {isEditing && editedProfile._id === worker._id ? (
-              <>
+              <div style={{margin:10}}>
                 <input
                   type="text"
                   placeholder="Name"
                   name="name"
                   value={editedProfile.name}
                   onChange={handleInputChange}
+                  style={{width:'100%', height:'5vh'}}
                 />
                 <br />
                 <input
@@ -100,6 +101,7 @@ function DisplayData() {
                   name="dateOfBirth"
                   value={editedProfile.dateOfBirth}
                   onChange={handleInputChange}
+                  style={{width:'100%', height:'5vh'}}
                 />
                 <br />
                 <input
@@ -108,6 +110,7 @@ function DisplayData() {
                   name="biography"
                   value={editedProfile.biography}
                   onChange={handleInputChange}
+                  style={{width:'100%', height:'5vh'}}
                 />
                 <br />
                 <input
@@ -116,6 +119,7 @@ function DisplayData() {
                   name="email"
                   value={editedProfile.email}
                   onChange={handleInputChange}
+                  style={{width:'100%', height:'5vh'}}
                 />
                 <br />
                 <input
@@ -124,6 +128,7 @@ function DisplayData() {
                   name="phoneNumber"
                   value={editedProfile.phoneNumber}
                   onChange={handleInputChange}
+                  style={{width:'100%', height:'5vh'}}
                 />
                 <br />
                 <select
@@ -131,6 +136,7 @@ function DisplayData() {
                   name="jobPosition"
                   value={editedProfile.jobPosition}
                   onChange={handleInputChange}
+                  style={{width:'100%', height:'5vh'}}
                 >
                   <option>CEO</option>
                   <option>Manager</option>
@@ -138,38 +144,62 @@ function DisplayData() {
                   <option>Intern</option>
                 </select>
                 <br />
-                <button onClick={handleUpdateProfile}>Update</button>
-                <button onClick={cancelEdit}>Cancel</button>
-              </>
+                <div style={{width:'100%', height:'5vh',display:'flex',justifyContent:"center"}}>
+                <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid",margin:2}} onClick={handleUpdateProfile}>Update</button>
+                <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid",margin:2}} onClick={cancelEdit}>Cancel</button>
+                </div>
+                
+              </div>
             ) : (
-              <>
-                <div className="Name">
+              <div style={{padding:10, backgroundColor:"#FEFFEC",margin:10}}>
+                <div style={{display:"flex", flexDirection:'row',justifyContent:"space-between",margin:10}}>
                   <p>
-                    {worker.surname}-{worker.name}
+                    Name and Surname:
+                  </p>
+                  <p>
+                    {worker.surname} {worker.name}
                   </p>
                 </div>
-                <div className="dateOfBirth">
-                  <p>Born in {worker.dateOfBirth}</p>
+                <div style={{display:"flex", flexDirection:'row',justifyContent:"space-between",margin:10}}>
+                  <p>
+                    Date of birth:
+                  </p>
+                  <p>{worker.dateOfBirth}</p>
                 </div>
-                <div className="biography">
+                <div style={{display:"flex", flexDirection:'row',justifyContent:"space-between",margin:10}}>
+                  <p>
+                    Biography:
+                  </p>
+                  <div style={{marginLeft:10}}>
                   <p>{worker.biography}</p>
+                  </div>
+                  
                 </div>
-                <div className="email">
-                  <p>Email-{worker.email}</p>
+                <div style={{display:"flex", flexDirection:'row',justifyContent:"space-between",margin:10}}>
+                  <p>
+                    Email:
+                  </p>
+                  <p>{worker.email}</p>
                 </div>
-                <div className="phoneNumber">
-                  <p>Call-{worker.phoneNumber}</p>
+                <div style={{display:"flex", flexDirection:'row',justifyContent:"space-between",margin:10}}>
+                  <p>
+                    Phone number:
+                  </p>
+                  <p>{worker.phoneNumber}</p>
                 </div>
-                <div className="Position">
+                <div style={{display:"flex", flexDirection:'row',justifyContent:"space-between",margin:10}}>
+                  <p>
+                    Position:
+                  </p>
                   <p>{worker.jobPosition}</p>
                 </div>
-                <div className="actions">
-                  <button onClick={() => handleEditProfile(worker)}>Edit</button>
-                  <button onClick={() => handleDeleteProfile(worker._id)}>
+                <div style={{display:'flex',justifyContent:"center"}}>
+                  <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid",margin:2}} onClick={() => handleEditProfile(worker)}>Edit</button>
+                  <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid",margin:2}} onClick={() => handleDeleteProfile(worker._id)}>
                     Delete
                   </button>
                 </div>
-              </>
+              </div>
             )}
           </div>
         ))

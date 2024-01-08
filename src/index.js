@@ -5,8 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store';
 import App from './App';
+import { createRoot } from 'react-dom/client';  // Fix the import here
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));  // Use createRoot directly
 root.render(
   <React.StrictMode>
     <Provider store={store}>    
